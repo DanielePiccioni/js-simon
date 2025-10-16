@@ -61,6 +61,11 @@ function mostraInput(){
     const inputEL = document.getElementById("input");
     inputEL.innerHTML = "";
 
+
+  const campiInputDiv = document.getElementById("campiInput");
+  campiInputDiv.innerHTML = "";
+
+
     //creazione dei 5 input al posto dei numeri 
     for(let i = 0; i < 5; i++){
         //creazione di un html input
