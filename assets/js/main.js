@@ -70,7 +70,7 @@ function mostraInput() {
         //placeholder frase all'interno
         input.placeholder = "inserisci i numeri di prima ";
         //aaggiunta di un nuovo input di un elemento già esistente
-        campiInputDiv .appendChild(input)
+        campiInputDiv.appendChild(input)
     }
 
     // Mostro il bottone già presente in HTML
@@ -78,3 +78,16 @@ function mostraInput() {
     bottone.style.display = "inline";
 }
 
+//funzione per controllare i numeri scritto dall'utente
+function controllaRisposte() {
+    const inputEL = document.querySelectorAll("#campiInput input");
+    const numeriUtente = [];
+
+    // prendo i numeri scritti dall’utente
+    for (let i = 0; i < inputEL.length; i++) {
+        const valore = Number(inputEL[i].value);
+        numeriUtente.push(valore);
+    }
+
+
+}
