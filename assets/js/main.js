@@ -47,5 +47,17 @@ const countdown = setInterval(() => {
     timerEL.textContent = "Tempo rimasto " + tempo + " secondi"
     if (tempo == 0) {
         clearInterval(countdown);
+        //function sottostante per eliminare i numeri e le scritte e aggiugnere gli input
+        mostraInput();
     }
 },1000);
+
+// spariscono i numeri e il tempo e appaiono degli input
+function mostraInput(){
+    //stampare "finito il tempo" appena il timer arriva a 0
+    numeriEL.textContent = "";
+    timerEL.textContent = "Finito il tempo";
+
+    const inputEL = document.getElementById("input");
+    inputEL.innerHTML = "";
+}
