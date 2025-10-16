@@ -89,5 +89,11 @@ function controllaRisposte() {
         numeriUtente.push(valore);
     }
 
-
+    //confronto con i numeri iniziali randomici
+    const indovinati = [];
+    for (let i = 0; i < numeriUtente.length; i++) {
+        if (numeriCasuali.includes(numeriUtente[i])) {
+            indovinati.push(numeriUtente[i]);
+        }
+    }
 }
