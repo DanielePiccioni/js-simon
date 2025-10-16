@@ -18,3 +18,17 @@ TOOLS:
 -verificare se i numeri inseriti sono corretti
 -stamparlo in pagina
 */
+
+
+//generazione di 5 numeri casuali
+
+const numeriCasuali = [];
+//prende 5 intervalli di numeri
+for( let i = 0; i < 5; i++){
+    //selezione di un numero randomomico da 1 a 50 per gli intervalli
+    const numero = Math.floor(Math.random()*50) + 1;
+    numeriCasuali.push(numero)
+
+    console.log(numero);
+    
+}
