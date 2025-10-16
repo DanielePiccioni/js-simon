@@ -24,13 +24,13 @@ TOOLS:
 
 const numeriCasuali = [];
 //prende 5 intervalli di numeri
-for( let i = 0; i < 5; i++){
+for (let i = 0; i < 5; i++) {
     //selezione di un numero randomomico da 1 a 50 per gli intervalli
-    const numero = Math.floor(Math.random()*50) + 1;
+    const numero = Math.floor(Math.random() * 50) + 1;
     numeriCasuali.push(numero)
 
     console.log(numero);
-    
+
 }
 //stampiamo i numeri in html
 const numeriEL = document.getElementById("numeri")
@@ -50,31 +50,31 @@ const countdown = setInterval(() => {
         //function sottostante per eliminare i numeri e le scritte e aggiugnere gli input
         mostraInput();
     }
-},1000);
+}, 1000);
 
 // spariscono i numeri e il tempo e appaiono degli input
-function mostraInput(){
+function mostraInput() {
     //stampare "finito il tempo" appena il timer arriva a 0
     numeriEL.textContent = "";
     timerEL.textContent = "Finito il tempo";
 
-    const inputEL = document.getElementById("input");
-    inputEL.innerHTML = "";
-
-
-  const campiInputDiv = document.getElementById("campiInput");
-  campiInputDiv.innerHTML = "";
-
+    const campiInputDiv = document.getElementById("campiInput");
+    campiInputDiv.innerHTML = "";
 
     //creazione dei 5 input al posto dei numeri 
-    for(let i = 0; i < 5; i++){
+    for (let i = 0; i < 5; i++) {
         //creazione di un html input
         const input = document.createElement("input")
         // impostare la sezione input per solo numeri
-        input.type= "number";
+        input.type = "number";
         //placeholder frase all'interno
         input.placeholder = "inserisci i numeri di prima ";
         //aaggiunta di un nuovo input di un elemento già esistente
-        inputEL.appendChild(input)
+        campiInputDiv .appendChild(input)
     }
+
+    // Mostro il bottone già presente in HTML
+    const bottone = document.getElementById("bottoneInvia");
+    bottone.style.display = "inline";
 }
+
