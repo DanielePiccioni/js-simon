@@ -32,3 +32,20 @@ for( let i = 0; i < 5; i++){
     console.log(numero);
     
 }
+//stampiamo i numeri in html
+const numeriEL = document.getElementById("numeri")
+numeriEL.textContent = numeriCasuali.join(" - ")
+
+//timer set 30 secondi
+let tempo = 5;
+const timerEL = document.getElementById("timer");
+//stampare il messaggio in html
+timerEL.textContent = "Tempo rimasto " + tempo + " secondi"
+
+const countdown = setInterval(() => {
+    tempo--;
+    timerEL.textContent = "Tempo rimasto " + tempo + " secondi"
+    if (tempo == 0) {
+        clearInterval(countdown);
+    }
+},1000);
