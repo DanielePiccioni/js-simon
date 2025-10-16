@@ -76,6 +76,7 @@ function mostraInput() {
     // Mostro il bottone già presente in HTML
     const bottone = document.getElementById("bottoneInvia");
     bottone.style.display = "inline";
+    bottone.onclick = controllaRisposte;
 }
 
 //funzione per controllare i numeri scritto dall'utente
@@ -96,4 +97,16 @@ function controllaRisposte() {
             indovinati.push(numeriUtente[i]);
         }
     }
+
+    //mostro il risultato
+    const risultatoEL = document.getElementById("risultato");
+    let messaggio = "Hai indovinato " + indovinati.length + " numeri.<br>";
+    if (indovinati.length > 0) {
+        messaggio += "Numeri corretti: " + indovinati.join(", ") + "<br>";
+    } else {
+        messaggio += "Numeri corretti: nessuno<br>";
+    }
+    messaggio += "I numeri da ricordare erano: " + numeriCasuali.join(", ");
+    risultatoEL.innerHTML = messaggio;
+
 }
