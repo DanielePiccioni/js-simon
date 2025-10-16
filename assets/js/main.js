@@ -60,4 +60,16 @@ function mostraInput(){
 
     const inputEL = document.getElementById("input");
     inputEL.innerHTML = "";
+
+    //creazione dei 5 input al posto dei numeri 
+    for(let i = 0; i < 5; i++){
+        //creazione di un html input
+        const input = document.createElement("input")
+        // impostare la sezione input per solo numeri
+        input.type= "number";
+        //placeholder frase all'interno
+        input.placeholder = "inserisci i numeri di prima ";
+        //aaggiunta di un nuovo input di un elemento già esistente
+        inputEL.appendChild(input)
+    }
 }
